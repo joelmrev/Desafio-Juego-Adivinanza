@@ -10,6 +10,7 @@ public class DesafioAdivinanza {
         int numeroUsuario = 0;
         int contador = 0;
         System.out.println(numeroAleatorio);
+        System.out.println("Bienvenid@ al Juego del Número Secreto \n");
 
         for (int i = 0; i < 5 ; i++) {
             System.out.println((i+1) + " Ingresa un número del 1 al 100: ");
