@@ -8,14 +8,12 @@ public class DesafioAdivinanza {
         Scanner teclado = new Scanner(System.in);
         int numeroAleatorio = new Random().nextInt(100);
         int numeroUsuario = 0;
-        int contador = 0;
         System.out.println(numeroAleatorio);
         System.out.println("Bienvenid@ al Juego del Número Secreto \n");
 
         for (int i = 0; i < 5 ; i++) {
             System.out.println((i+1) + " Ingresa un número del 1 al 100: ");
             numeroUsuario = teclado.nextInt();
-            contador++;
 
             if (numeroUsuario != numeroAleatorio) {
                 if (numeroUsuario > numeroAleatorio){
@@ -25,11 +23,11 @@ public class DesafioAdivinanza {
                 }
             } else {
                 System.out.println("EXCELENTE!, el número aleatorio es: " + numeroAleatorio );
-                System.out.println("Número de intentos: " + contador);
+                System.out.println("Número de intentos: " + (i+1));
                 break;
             }
 
-            if (contador == 5) {
+            if (i == 5) {
                 System.out.println("LLEGO AL NÚMERO MÁXIMO DE INTENTOS. \n");
             }
 
